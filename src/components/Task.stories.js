@@ -4,11 +4,18 @@ import { withKnobs, object } from '@storybook/addon-knobs/react';
 import Task from './Task';
 
 export default {
-  component: Task,
-  title: 'Task',
-  decorators: [withKnobs],
-  // Our exports that end in "Data" are not stories.
-  excludeStories: /.*Data$/,
+    component: Task,
+    title: 'Task',
+    decorators: [withKnobs],
+    parameters: {
+        assets: [
+        '/designs/app.png',
+        '/designs/items.png',
+        '/designs/list-1.png'
+        ],
+    },
+    // Our exports that end in "Data" are not stories.
+    excludeStories: /.*Data$/,
 };
 
 export const taskData = {
